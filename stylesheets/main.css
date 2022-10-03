@@ -1,0 +1,371 @@
+@font-face {
+    font-family: "Varela";
+    src: url(../fonts/VarelaRound-Regular.ttf);
+}
+
+
+:root {
+    --mine-shaft: #222;
+    --harlequin: #3f3;
+    --mercury: #e9e9e9;
+
+    --text-shadow: 2px 2px 2px #0008;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Varela";
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--mercury);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    height: 500px;
+    background-image: url(../images/headerBg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+nav {
+    width: 100%;
+    height: 10%;
+    padding: 0 5%;
+
+    position: fixed;
+    top: 0;
+    z-index: 1;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 250ms;
+}
+
+nav.scroll {
+    background-color: #0001;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 1px 2px #0005;
+}
+
+nav .menuIcon {
+    font-size: 3rem;
+    color: var(--mercury);
+    text-shadow: var(--text-shadow);
+    display: none;
+}
+
+
+nav .logoMenu {
+    width: 10%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+nav .linkInicio {
+    height: 85%;
+    display: none;
+    animation: fadeIn 1s;
+}
+
+nav .show {
+    display: flex;
+}
+
+nav img {
+    height: 100%;
+}
+
+.links {
+    width: 35%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.links a {
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: var(--mercury);
+    text-shadow: var(--text-shadow);
+    transition: 600ms;
+}
+
+.links a:hover {
+    color: var(--harlequin);
+}
+
+/* logo principal */
+
+.logoPrincipal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 46%;
+}
+
+
+.logoPrincipal h1 {
+    font-size: 2.5rem;
+    color: var(--mercury);
+    text-shadow: var(--text-shadow);
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+
+h2 {
+    font-size: 2rem;
+    color: var(--mine-shaft);
+    text-shadow: var(--text-shadow);
+}
+
+/* sections */
+section {
+    width: 100%;
+    height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* sobre */
+
+#sobre p {
+    font-size: 1.9rem;
+    color: var(--mine-shaft);
+    width: 65%;
+    margin-top: 5%;
+}
+
+/* serviços */
+
+#servicos {
+    background-image: url("../images/servicosBg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+#servicos h2 {
+    color: var(--mercury);
+}
+
+.main {
+    margin-top: 3%;
+    width: 65%;
+    height: 55%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.servico {
+    width: 20%;
+    height: 80%;
+    font-size: 1.6rem;
+    color: var(--mercury);
+    text-shadow: var(--text-shadow);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card {
+    width: 80%;
+    padding: 20% 0;
+    background: linear-gradient(to bottom right, #3f3, #078513);
+    box-shadow: 3px 4px 5px #0005;
+
+    font-size: 6rem;
+    color: var(--mine-shaft);
+    text-shadow: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#contato {
+    justify-content: space-between;
+    padding: 5% 0;
+}
+
+.infoContato {
+    width: 65%;
+    height: 23%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.info {
+    width: 30%;
+    height: 100%;
+    font-size: 3rem;
+    color: var(--mine-shaft);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info p {
+    font-size: 1.5rem;
+}
+
+form {
+    width: 65%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2%;
+}
+
+#inputText,
+#textfieldBtn {
+    width: 45%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#inputText input,
+#textfieldBtn textarea {
+    width: 100%;
+    height: 25%;
+    background-color: #0001;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--mine-shaft);
+    font-size: 1.2rem;
+    padding: 0 10px;
+}
+
+#textfieldBtn textarea {
+    resize: none;
+    height: 62.5%;
+}
+
+#textfieldBtn button {
+    width: 50%;
+    height: 25%;
+    font-size: 2rem;
+    color: var(--mercury);
+    background-color: var(--mine-shaft);
+    border: none;
+    box-shadow: 2px 2px 2px #0005;
+
+    cursor: pointer;
+}
+
+footer {
+    width: 100%;
+    height: 250px;
+    background-color: var(--mine-shaft);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content {
+    width: 80%;
+    height: 90%;
+    padding-top: 1%;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.logoContainer,
+.content .links,
+.content .infoContato {
+    height: 65%;
+    width: 25%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.logoContainer img {
+    height: 90%;
+}
+
+/* informação de contato */
+.content .info {
+    width: 100%;
+    font-size: 2.4rem;
+    color: var(--mercury);
+
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.content p {
+    width: 80%;
+    font-size: 1.3rem;
+}
+
+footer span {
+    width: 80%;
+    height: 10%;
+    font-size: 1.3rem;
+    color: var(--mercury);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-top: 1px solid var(--harlequin);
+}
